@@ -8,11 +8,15 @@ services:
     happyr.google.api.analytics:
         class: HappyR\Google\ApiBundle\Services\AnalyticsService
         arguments: ["@happyr.google.api.client"]
-    
+
     happyr.google.api.youtube:
         class: HappyR\Google\ApiBundle\Services\YoutubeService
         arguments: ["@happyr.google.api.client"]
 
     happyr.google.api.groups_migration:
         class: HappyR\Google\ApiBundle\Services\GroupsMigrationService
+        arguments: ["@happyr.google.api.client"]
+
+    happyr.google.api.ad_exchange_buyer:
+        class: HappyR\Google\ApiBundle\Services\AdExchangeBuyerService
         arguments: ["@happyr.google.api.client"]
